@@ -38,7 +38,7 @@ void mainMenu() {
 }
 
 void majorScale() {
-    cout << "\n--------------| MAJOR  SCALE |--------------\n\n";
+    cout << "--------------| MAJOR  SCALE |--------------\n\n";
     cout << "R = Root\nW = Whole Step\nH = Half Step\n\n";
     cout << "Major Scale Intervals  =  W  W  H  W  W  W  H\n\n";
     string key;
@@ -76,7 +76,7 @@ void majorScale() {
 }
 
 void minorScale() {
-    cout << "\n--------------| MINOR  SCALE |--------------\n\n";
+    cout << "--------------| MINOR  SCALE |--------------\n\n";
     cout << "R = Root\nW = Whole Step\nH = Half Step\n\n";
     cout << "Minor Scale Intervals  =  W  H  W  W  H  W  W\n\n";
     string key;
@@ -114,7 +114,7 @@ void minorScale() {
 }
 
 void majorTriads() {
-    cout << "\n--------------| MAJOR TRIADS |--------------\n\n";
+    cout << "--------------| MAJOR TRIADS |--------------\n\n";
     cout << "Major Triads  =  (Root)  +  (Major 3rd)  +  (Perfect 5th)\n\n";
     string key;
     majorTriadsAgain:
@@ -141,7 +141,7 @@ void majorTriads() {
 }
 
 void minorTriads() {
-    cout << "\n--------------| MINOR TRIADS |--------------\n\n";
+    cout << "--------------| MINOR TRIADS |--------------\n\n";
     cout << "Major Triads  =  (Root)  +  (Minor 3rd)  +  (Perfect 5th)\n\n";
     string key;
     minorTriadsAgain:
@@ -168,7 +168,7 @@ void minorTriads() {
 }
 
 void majorChordFamily() {
-    cout << "\n-----------| MAJOR CHORD FAMILY |-----------\n\n";
+    cout << "-----------| MAJOR CHORD FAMILY |-----------\n\n";
     string key;
     anotherChordFamily:
     cout << "Enter Root Note >>> ";
@@ -202,7 +202,7 @@ void majorChordFamily() {
 }
 
 void minorChordFamily () {
-    cout << "\n-----------| MINOR CHORD FAMILY |-----------\n\n";
+    cout << "-----------| MINOR CHORD FAMILY |-----------\n\n";
     string key;
     anotherChordFamily:
     cout << "Enter Root Note >>> ";
