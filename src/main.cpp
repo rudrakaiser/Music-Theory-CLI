@@ -24,11 +24,9 @@ int findIndex (string key) {
     return -1;
 }
 
-void title() {
-    cout << "------------| MUSIC THEORY CLI |------------\n\n";
-}
-
 void mainMenu() {
+    system("cls");
+    cout << "------------| MUSIC THEORY CLI |------------\n\n";
     cout << "1. MAJOR SCALE" << endl;
     cout << "2. MINOR SCALE" << endl;
     cout << "3. MAJOR TRIADS" << endl;
@@ -50,24 +48,24 @@ void majorScale() {
     int keyIndex = findIndex(key);
     if (keyIndex == -1) {
         cout << "\"" << key << "\"" << " Invalid Note!!!" << endl << endl;
-        return;
+    } else {
+        cout << endl << key << " Major Scale  =  ";
+        cout << chromatic[keyIndex] << "  ";
+        keyIndex += 2; keyIndex %= 12; // whole note
+        cout << chromatic[keyIndex] << "  ";
+        keyIndex += 2; keyIndex %= 12; // whole note
+        cout << chromatic[keyIndex] << "  ";
+        keyIndex += 1; keyIndex %= 12; // half note
+        cout << chromatic[keyIndex] << "  ";
+        keyIndex += 2; keyIndex %= 12; // whole note
+        cout << chromatic[keyIndex] << "  ";
+        keyIndex += 2; keyIndex %= 12; // whole note
+        cout << chromatic[keyIndex] << "  ";
+        keyIndex += 2; keyIndex %= 12; // whole note
+        cout << chromatic[keyIndex] << "  ";
+        keyIndex += 1; keyIndex %= 12; // half note
+        cout << chromatic[keyIndex] << endl << endl;
     }
-    cout << endl << key << " Major Scale  =  ";
-    cout << chromatic[keyIndex] << "  ";
-    keyIndex += 2; keyIndex %= 12; // whole note
-    cout << chromatic[keyIndex] << "  ";
-    keyIndex += 2; keyIndex %= 12; // whole note
-    cout << chromatic[keyIndex] << "  ";
-    keyIndex += 1; keyIndex %= 12; // half note
-    cout << chromatic[keyIndex] << "  ";
-    keyIndex += 2; keyIndex %= 12; // whole note
-    cout << chromatic[keyIndex] << "  ";
-    keyIndex += 2; keyIndex %= 12; // whole note
-    cout << chromatic[keyIndex] << "  ";
-    keyIndex += 2; keyIndex %= 12; // whole note
-    cout << chromatic[keyIndex] << "  ";
-    keyIndex += 1; keyIndex %= 12; // half note
-    cout << chromatic[keyIndex] << endl << endl;
     string checkAgain;
     cout << "Find Again (y/n) >>> ";
     cin >> checkAgain;
@@ -75,13 +73,12 @@ void majorScale() {
     if (findAgain(checkAgain)) {
         goto majorScaleAgain;
     }
-    cout << "--------------------------------------------\n\n";
 }
 
 void minorScale() {
     cout << "\n--------------| MINOR  SCALE |--------------\n\n";
     cout << "R = Root\nW = Whole Step\nH = Half Step\n\n";
-    cout << "Major Scale Intervals  =  W  H  W  W  H  W  W\n\n";
+    cout << "Minor Scale Intervals  =  W  H  W  W  H  W  W\n\n";
     string key;
     minorScaleAgain:
     cout << "Enter Root Note >>> ";
@@ -89,24 +86,24 @@ void minorScale() {
     int keyIndex = findIndex(key);
     if (keyIndex == -1) {
         cout << "\"" << key << "\"" << " Invalid Note!!!" << endl << endl;
-        return;
+    } else {
+        cout << endl << key << " Minor Scale  =  ";
+        cout << chromatic[keyIndex] << "  ";
+        keyIndex += 2; keyIndex %= 12; // whole note
+        cout << chromatic[keyIndex] << "  ";
+        keyIndex += 1; keyIndex %= 12; // half note
+        cout << chromatic[keyIndex] << "  ";
+        keyIndex += 2; keyIndex %= 12; // whole note
+        cout << chromatic[keyIndex] << "  ";
+        keyIndex += 2; keyIndex %= 12; // whole note
+        cout << chromatic[keyIndex] << "  ";
+        keyIndex += 1; keyIndex %= 12; // half note
+        cout << chromatic[keyIndex] << "  ";
+        keyIndex += 2; keyIndex %= 12; // whole note
+        cout << chromatic[keyIndex] << "  ";
+        keyIndex += 2; keyIndex %= 12; // whole note
+        cout << chromatic[keyIndex] << endl << endl;
     }
-    cout << endl << key << " Minor Scale  =  ";
-    cout << chromatic[keyIndex] << "  ";
-    keyIndex += 2; keyIndex %= 12; // whole note
-    cout << chromatic[keyIndex] << "  ";
-    keyIndex += 1; keyIndex %= 12; // half note
-    cout << chromatic[keyIndex] << "  ";
-    keyIndex += 2; keyIndex %= 12; // whole note
-    cout << chromatic[keyIndex] << "  ";
-    keyIndex += 2; keyIndex %= 12; // whole note
-    cout << chromatic[keyIndex] << "  ";
-    keyIndex += 1; keyIndex %= 12; // half note
-    cout << chromatic[keyIndex] << "  ";
-    keyIndex += 2; keyIndex %= 12; // whole note
-    cout << chromatic[keyIndex] << "  ";
-    keyIndex += 2; keyIndex %= 12; // whole note
-    cout << chromatic[keyIndex] << endl << endl;
     string checkAgain;
     cout << "Find Again (y/n) >>> ";
     cin >> checkAgain;
@@ -114,7 +111,6 @@ void minorScale() {
     if (findAgain(checkAgain)) {
         goto minorScaleAgain;
     }
-    cout << "--------------------------------------------\n\n";
 }
 
 void majorTriads() {
@@ -127,14 +123,14 @@ void majorTriads() {
     int keyIndex = findIndex(key);
     if (keyIndex == -1) {
         cout << "\"" << key << "\"" << " Invalid Note!!!" << endl << endl;
-        return;
+    } else {
+        cout << endl << key << " Major Triads  =  ";
+        cout << chromatic[keyIndex] << "  ";
+        keyIndex += 4; keyIndex %= 12;
+        cout << chromatic[keyIndex] << "  ";
+        keyIndex += 3; keyIndex %= 12;
+        cout << chromatic[keyIndex] << endl << endl;
     }
-    cout << endl << key << " Major Triads  =  ";
-    cout << chromatic[keyIndex] << "  ";
-    keyIndex += 4; keyIndex %= 12;
-    cout << chromatic[keyIndex] << "  ";
-    keyIndex += 3; keyIndex %= 12;
-    cout << chromatic[keyIndex] << endl << endl;
     string checkAgain;
     cout << "Find Again (y/n) >>> ";
     cin >> checkAgain;
@@ -142,7 +138,6 @@ void majorTriads() {
     if (findAgain(checkAgain)) {
         goto majorTriadsAgain;
     }
-    cout << "--------------------------------------------\n\n";
 }
 
 void minorTriads() {
@@ -155,14 +150,14 @@ void minorTriads() {
     int keyIndex = findIndex(key);
     if (keyIndex == -1) {
         cout << "\"" << key << "\"" << " Invalid Note!!!" << endl << endl;
-        return;
+    } else {
+        cout << endl << key << " Minor Triads  =  ";
+        cout << chromatic[keyIndex] << "  ";
+        keyIndex += 3; keyIndex %= 12;
+        cout << chromatic[keyIndex] << "  ";
+        keyIndex += 4; keyIndex %= 12;
+        cout << chromatic[keyIndex] << endl << endl;
     }
-    cout << endl << key << " Minor Triads  =  ";
-    cout << chromatic[keyIndex] << "  ";
-    keyIndex += 3; keyIndex %= 12;
-    cout << chromatic[keyIndex] << "  ";
-    keyIndex += 4; keyIndex %= 12;
-    cout << chromatic[keyIndex] << endl << endl;
     string checkAgain;
     cout << "Find Again (y/n) >>> ";
     cin >> checkAgain;
@@ -170,7 +165,6 @@ void minorTriads() {
     if (findAgain(checkAgain)) {
         goto minorTriadsAgain;
     }
-    cout << "--------------------------------------------\n\n";
 }
 
 void majorChordFamily() {
@@ -205,7 +199,6 @@ void majorChordFamily() {
     if (findAgain(checkAgain)) {
         goto anotherChordFamily;
     }
-    cout << "--------------------------------------------\n\n";
 }
 
 void minorChordFamily () {
@@ -219,7 +212,7 @@ void minorChordFamily () {
         cout << "\"" << key << "\"" << " Invalid Note!!!" << endl << endl;
         return;
     }
-    cout << endl << key << " Major Chord Family\n\n";
+    cout << endl << key << " Minor Chord Family\n\n";
     cout << "i    =  " << chromatic[keyIndex] << " minor" << endl;
     keyIndex += 2; keyIndex %= 12; // whole note
     cout << "ii\'  =  " << chromatic[keyIndex] << " Diminished" << endl;
@@ -240,7 +233,6 @@ void minorChordFamily () {
     if (findAgain(checkAgain)) {
         goto anotherChordFamily;
     }
-    cout << "--------------------------------------------\n\n";
 }
 
 void about() {
@@ -259,35 +251,47 @@ void about() {
     cout << "Version: 1.0.0\n";
     cout << "Created with passion for music and coding.\n\n";
     cout << "--------------------------------------------\n\n";
+    cout << "Press ENTER to return to Main Menu >>> ";
+    cin.ignore();
+    cin.get();
 }
 
 int32_t main() {
     ios_base::sync_with_stdio(false);
-    title();
-    mainMenu();
     while (true) {
+        mainMenu();
         string choice;
+        takeChoiceAgain:
         cout << "Enter Choice >>> ";
         cin >> choice;
         if (choice == "1") {
+            system("cls");
             majorScale();
         } else if (choice == "2") {
+            system("cls");
             minorScale();
         } else if (choice == "3") {
+            system("cls");
             majorTriads();
         } else if (choice == "4") {
+            system("cls");
             minorTriads();
         } else if (choice == "5") {
+            system("cls");
             majorChordFamily();
         } else if (choice == "6") {
+            system("cls");
             minorChordFamily();
         } else if (choice == "7") {
+            system("cls");
             about();
         } else if (choice == "0") {
+            system("cls");
             cout << "\n-----------------| EXITED |-----------------\n\n";
             return 0;
         } else {
             cout << "Please Enter A Valid Choice!" << endl << endl;
+            goto takeChoiceAgain;
         }
     }
 }
