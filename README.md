@@ -27,12 +27,11 @@ A simple **C++ Command-Line Interface (CLI) tool** to help musicians, students, 
     ```
 3. Compile the code (example using g++):
     ```bash
-    g++ main.cpp -o MusicTheory
+    g++ main.cpp -o main
     ```
 4. Run the program:
     ```bash
-    ./MusicTheory   # Linux/Mac
-    MusicTheory.exe # Windows
+    .\main
     ```
 
 ## Usage
